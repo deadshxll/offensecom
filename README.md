@@ -1,5 +1,5 @@
 # OFFENSECOM
-`offensecom` (*offen-si-calm*) is an [ncurses](https://en.wikipedia.org/wiki/Ncurses#:~:text=ncurses%20(new%20curses)%20is%20a,a%20computer%20terminal%2Dindependent%20manner.) based user interface for any kinds of communications solution you wish to embark upon. This can range from communicating with a friend, to creating a C2 that handles reverse shells from any kind of system you want. Offensecom handles the UI aspect, allowing you to develop your own communications solution without spending time on handling UI.
+`offensecom` (*offen-si-calm*), originally developed to be an IRC type solution, is an [ncurses](https://en.wikipedia.org/wiki/Ncurses#:~:text=ncurses%20(new%20curses)%20is%20a,a%20computer%20terminal%2Dindependent%20manner.) based user interface for any kinds of communications solution you wish to embark upon. This can range from communicating with a friend, to creating a C2 that handles reverse shells from any kind of system you want. Offensecom handles the UI aspect, allowing you to develop your own communications solution without spending time on handling UI.
 
 **WARNING:** This is not designed as a real solution, and is merely a project I was working on for fun.
 
@@ -18,6 +18,10 @@ chmod +x run.sh
 ```
 This will build the project and output the binary into the current directory inside the `build/` folder, as well as run the binary.
 
+## Plans
+- Add the ability to scroll in the UI
+- Add scrolling for when too much text is being typed in the input field.
+- Add basic documentation
 
 ## Showcase
 ![image](https://github.com/user-attachments/assets/becc5c86-eab8-4379-8407-4a7993420660)
