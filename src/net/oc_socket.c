@@ -11,6 +11,19 @@
 #include "../ui/oc_ui.h"
 #include "oc_socket.h"
 
+/*
+
+This is an example use case for the offensecom client.
+
+All this does is connect to a socket & recieves messages and displays it in the
+offensecom ui.
+
+At line 111 in ui/oc_ui.c, you will find that when you send a message through
+the offensecom client, it will call the `offensecom_socket_send` to send a
+message if the socket is connected.
+
+*/
+
 int status, valread, client_fd, oc_socket_connected;
 void offensecom_socket_connect(char ip[], int port) {
   struct sockaddr_in serv_addr;
@@ -49,6 +62,10 @@ void offensecom_socket_connect(char ip[], int port) {
       buffer[msglen - 1] = '\0';
     }
 
+    // If we recieve a message, then create a message with the username "SERVER"
+    // In offensecom, if there is no username, then the message would be
+    // displayed without the username tags (<username>), making it kind of like
+    // a broadcast / message.
     if (msglen > 1)
       offensecom_ui_createmessage("SERVER", buffer);
   }

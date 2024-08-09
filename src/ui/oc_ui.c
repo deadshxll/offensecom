@@ -107,6 +107,10 @@ void handle_input(int c) {
       oc_cmd_manager_handle_command(input_box_contents);
     } else {
       offensecom_ui_createmessage(user_name, input_box_contents);
+
+      // Here is where the message from the client is handled, in this case we
+      // use net/oc_socket (offensecom socket), to first check if the socket is
+      // connected, if it is, then send the message through the socket.
       if (offensecom_socket_is_connected() == 1)
         offensecom_socket_send(input_box_contents);
     }
