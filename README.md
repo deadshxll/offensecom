@@ -3,18 +3,20 @@
 
 **WARNING:** This is not designed as a real solution, and is merely a project I was working on for fun.
 
+**This only works and is only tested on linux.**
+
 ## How to build/run
 First, clone the repository
 ```bash
 git clone https://github.com/deadshxll/offensecom.git
 ```
 Now cd into the directory and run the `run.sh` script.
-```c
+```bash
 cd offensecom
 chmod +x run.sh
 ./run.sh
 ```
-This will build the project and output the binary into the current directory inside the `build/` folder.
+This will build the project and output the binary into the current directory inside the `build/` folder, as well as run the binary.
 
 
 ## Showcase
